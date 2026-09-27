@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Indhold, typer, lint og tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Stops the build if any approved page lacks a source, an approving doctor
+      # or a valid fingerprint, or if a formula does not reproduce its
+      # doctor-verified examples. Then typecheck, lint and all tests.
+      - run: npm run verify

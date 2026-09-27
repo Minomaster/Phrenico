@@ -1,0 +1,105 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# SKABELON FOR EN FORMEL (dosisberegning)
+#
+# Kopiér filen til content/formler/<id>.yaml og udfyld den med det
+# LÆGEGODKENDTE indhold. Filnavnet skal være det samme som `id`.
+# Alt i <vinkelparenteser> skal erstattes. Se docs/INDHOLD.md for hele
+# arbejdsgangen: udkast → lægens kontrol → godkendelse → fingeraftryk → build.
+#
+# Filer i content/skabeloner/ bliver aldrig bygget ind i appen.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Unikt id: små bogstaver a-z, tal og bindestreger. Skift det aldrig bagefter,
+# for favoritter og links peger på det.
+id: <formlens-id>
+
+# Navnet, der vises øverst på siden og i listen.
+title: <Formlens navn>
+
+# Kort beskrivelse (1-2 linjer) under titlen og i lister.
+summary: <Kort beskrivelse af, hvad formlen beregner>
+
+# Ekstra søgeord: synonymer, forkortelser, stavemåder.
+keywords:
+  - <søgeord>
+
+# Felterne lægen udfylder. Værdier uden for min–max bliver AFVIST (aldrig rettet).
+inputs:
+  # Talfelt:
+  - id: <feltId>            # fx weight – bruges i koden
+    kind: number
+    label: <Feltets navn>   # fx det, lægen ser ved feltet
+    unit: <enhed>           # fx kg
+    min: <laveste tilladte værdi>
+    max: <højeste tilladte værdi>
+    maxDecimals: <antal decimaler lægen må skrive>
+    hint: <valgfri hjælpetekst>
+
+  # Valgfelt:
+  - id: <feltId>
+    kind: choice
+    label: <Feltets navn>
+    options:
+      - value: <mulighedId>
+        label: <Tekst for muligheden>
+      - value: <mulighedId>
+        label: <Tekst for muligheden>
+
+# Resultaterne. Afrunding er "halvt op" til det angivne antal decimaler.
+outputs:
+  - id: <resultatId>
+    label: <Resultatets navn>
+    unit: <enhed>
+    decimals: <antal decimaler der vises>
+
+# Sektionen "Dokumentation". Tekstblokke: paragraph, bullets, steps, warning.
+# **fed** markerer fed tekst.
+documentation:
+  - type: paragraph
+    text: <Tekst>
+  - type: bullets
+    items:
+      - <Punkt>
+  - type: warning
+    text: <Vigtig advarsel>
+
+# Sektionen "Eksempel på brug".
+example:
+  - type: steps
+    items:
+      - <Trin 1>
+      - <Trin 2>
+
+# LÆGEVERIFICEREDE EKSEMPLER: indtastninger og det forventede (afrundede)
+# resultat. Koden testes mod dem ved hvert build. Medtag gerne grænseværdier.
+verifiedExamples:
+  - description: <Hvad eksemplet viser>
+    inputs: { <feltId>: <værdi>, <feltId>: <værdi> }
+    expected: { <resultatId>: <forventet resultat> }
+
+# Id'er på relaterede sygdomme (valgfrit).
+relatedDiseases: []
+
+# Mindst én kilde. Kun de manuelt fundne, lægegodkendte kilder.
+sources:
+  - title: <Kildens titel>
+    publisher: <Udgiver>
+    edition: <Udgave>
+    year: <År>
+    pages: <Sidetal>
+    # url: <Webadresse>
+    # accessed: <ÅÅÅÅ-MM-DD>
+
+# Godkendelse. Start med status: draft. Når lægen har kontrolleret den
+# færdige fil, udfyldes resten, og status sættes til approved.
+approval:
+  status: draft
+  # approvedBy:
+  #   name: <Lægens navn>
+  #   title: <fx Overlæge, afdeling>
+  # approvedAt: <ÅÅÅÅ-MM-DD>
+  # reviewBy: <ÅÅÅÅ-MM-DD>   # hvornår siden skal gennemgås igen
+  # fingerprint: <kør: npm run content:fingerprint -- content/formler/<id>.yaml>
+
+# Hæv med 1, hver gang indholdet ændres.
+version: 1

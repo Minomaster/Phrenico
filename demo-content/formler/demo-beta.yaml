@@ -1,0 +1,52 @@
+# DEMO-INDHOLD – IKKE MEDICINSK.
+# Viser et valgfelt (kind: choice) på formel-siden.
+id: demo-beta
+title: Beta (demoformel)
+summary: Pladsholder. Ganger et felt med en valgt faktor.
+keywords:
+  - demo
+  - faktor
+inputs:
+  - id: fieldC
+    kind: number
+    label: Felt C
+    unit: enhed
+    min: 1
+    max: 10
+    maxDecimals: 0
+  - id: factor
+    kind: choice
+    label: Faktor
+    options:
+      - value: single
+        label: Enkelt (× 1)
+      - value: double
+        label: Dobbelt (× 2)
+outputs:
+  - id: product
+    label: Produkt
+    unit: enhed
+    decimals: 0
+documentation:
+  - type: paragraph
+    text: Pladsholdertekst for dokumentation af en formel med et valgfelt.
+example:
+  - type: paragraph
+    text: Pladsholder. Felt C = 4 og faktor Dobbelt giver 8 enhed.
+verifiedExamples:
+  - description: Demo – enkelt faktor
+    inputs: { fieldC: 4, factor: single }
+    expected: { product: 4 }
+  - description: Demo – dobbelt faktor
+    inputs: { fieldC: 4, factor: double }
+    expected: { product: 8 }
+relatedDiseases:
+  - demo-sygdom-alfa
+  - demo-sygdom-delta
+sources:
+  - title: Pladsholderkilde – ikke en rigtig kilde
+    publisher: Demo
+approval:
+  status: draft
+  note: Demo-indhold til design og test. Ikke medicinsk.
+version: 1

@@ -1,0 +1,26 @@
+# DEMO-INDHOLD – IKKE MEDICINSK.
+id: demo-sygdom-delta
+title: Delta (demosygdom)
+summary: Pladsholder. En kort sygdomsside med én relateret formel.
+keywords:
+  - demo
+causes:
+  - type: paragraph
+    text: Pladsholdertekst for årsager.
+symptoms:
+  - type: bullets
+    items:
+      - Symptom 2
+      - Symptom 4
+treatment:
+  - type: paragraph
+    text: Pladsholdertekst for behandling.
+relatedFormulas:
+  - demo-beta
+sources:
+  - title: Pladsholderkilde – ikke en rigtig kilde
+    publisher: Demo
+approval:
+  status: draft
+  note: Demo-indhold til design og test. Ikke medicinsk.
+version: 1

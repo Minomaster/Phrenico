@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "kind": "demo",
+  "contentVersion": "ab995cca1e8e",
+  "latestApproval": null,
+  "formulas": [
+    {
+      "id": "demo-alfa",
+      "title": "Alfa (demoformel)",
+      "summary": "Pladsholder. Lægger to felter sammen, så formel-siden kan vises.",
+      "keywords": [
+        "demo",
+        "sum"
+      ],
+      "inputs": [
+        {
+          "id": "fieldA",
+          "kind": "number",
+          "label": "Felt A",
+          "unit": "enhed",
+          "min": 0,
+          "max": 100,
+          "maxDecimals": 1,
+          "hint": "Pladsholder for en hjælpetekst til feltet."
+        },
+        {
+          "id": "fieldB",
+          "kind": "number",
+          "label": "Felt B",
+          "unit": "enhed",
+          "min": 0,
+          "max": 100,
+          "maxDecimals": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sum",
+          "label": "Sum",
+          "unit": "enhed",
+          "decimals": 1
+        }
+      ],
+      "documentation": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst. Her kommer den lægegodkendte **dokumentation** af formlen."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Pladsholder for et punkt.",
+            "Pladsholder for et punkt mere."
+          ]
+        }
+      ],
+      "example": [
+        {
+          "type": "steps",
+          "items": [
+            "Skriv 12,5 i Felt A.",
+            "Skriv 3 i Felt B.",
+            "Tryk på Beregn. Resultatet er 15,5 enhed."
+          ]
+        }
+      ],
+      "verifiedExamples": [
+        {
+          "description": "Demo – to tal",
+          "inputs": {
+            "fieldA": 12.5,
+            "fieldB": 3
+          },
+          "expected": {
+            "sum": 15.5
+          }
+        },
+        {
+          "description": "Demo – grænseværdier",
+          "inputs": {
+            "fieldA": 100,
+            "fieldB": 0
+          },
+          "expected": {
+            "sum": 100
+          }
+        }
+      ],
+      "relatedDiseases": [
+        "demo-sygdom-alfa"
+      ],
+      "sources": [
+        {
+          "title": "Pladsholderkilde – ikke en rigtig kilde",
+          "publisher": "Demo"
+        }
+      ],
+      "approval": {
+        "status": "draft",
+        "note": "Demo-indhold til design og test. Ikke medicinsk."
+      },
+      "version": 1
+    },
+    {
+      "id": "demo-beta",
+      "title": "Beta (demoformel)",
+      "summary": "Pladsholder. Ganger et felt med en valgt faktor.",
+      "keywords": [
+        "demo",
+        "faktor"
+      ],
+      "inputs": [
+        {
+          "id": "fieldC",
+          "kind": "number",
+          "label": "Felt C",
+          "unit": "enhed",
+          "min": 1,
+          "max": 10,
+          "maxDecimals": 0
+        },
+        {
+          "id": "factor",
+          "kind": "choice",
+          "label": "Faktor",
+          "options": [
+            {
+              "value": "single",
+              "label": "Enkelt (× 1)"
+            },
+            {
+              "value": "double",
+              "label": "Dobbelt (× 2)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "product",
+          "label": "Produkt",
+          "unit": "enhed",
+          "decimals": 0
+        }
+      ],
+      "documentation": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for dokumentation af en formel med et valgfelt."
+        }
+      ],
+      "example": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholder. Felt C = 4 og faktor Dobbelt giver 8 enhed."
+        }
+      ],
+      "verifiedExamples": [
+        {
+          "description": "Demo – enkelt faktor",
+          "inputs": {
+            "fieldC": 4,
+            "factor": "single"
+          },
+          "expected": {
+            "product": 4
+          }
+        },
+        {
+          "description": "Demo – dobbelt faktor",
+          "inputs": {
+            "fieldC": 4,
+            "factor": "double"
+          },
+          "expected": {
+            "product": 8
+          }
+        }
+      ],
+      "relatedDiseases": [
+        "demo-sygdom-alfa",
+        "demo-sygdom-delta"
+      ],
+      "sources": [
+        {
+          "title": "Pladsholderkilde – ikke en rigtig kilde",
+          "publisher": "Demo"
+        }
+      ],
+      "approval": {
+        "status": "draft",
+        "note": "Demo-indhold til design og test. Ikke medicinsk."
+      },
+      "version": 1
+    },
+    {
+      "id": "demo-gamma",
+      "title": "Gamma (demoformel)",
+      "summary": "Pladsholder. Viser en formel med to resultater.",
+      "keywords": [
+        "demo"
+      ],
+      "inputs": [
+        {
+          "id": "fieldD",
+          "kind": "number",
+          "label": "Felt D",
+          "unit": "enhed",
+          "min": 0,
+          "max": 1000,
+          "maxDecimals": 2
+        },
+        {
+          "id": "fieldE",
+          "kind": "number",
+          "label": "Felt E",
+          "unit": "enhed",
+          "min": 1,
+          "max": 100,
+          "maxDecimals": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "quotient",
+          "label": "Kvotient",
+          "unit": "enhed",
+          "decimals": 2
+        },
+        {
+          "id": "difference",
+          "label": "Differens",
+          "unit": "enhed",
+          "decimals": 2
+        }
+      ],
+      "documentation": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for dokumentation af en formel med flere resultater."
+        }
+      ],
+      "example": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholder. Felt D = 10 og Felt E = 4 giver kvotient 2,50 og differens 6,00."
+        }
+      ],
+      "verifiedExamples": [
+        {
+          "description": "Demo – afrunding halvt op",
+          "inputs": {
+            "fieldD": 10,
+            "fieldE": 3
+          },
+          "expected": {
+            "quotient": 3.33,
+            "difference": 7
+          }
+        },
+        {
+          "description": "Demo – eksakt resultat",
+          "inputs": {
+            "fieldD": 10,
+            "fieldE": 4
+          },
+          "expected": {
+            "quotient": 2.5,
+            "difference": 6
+          }
+        }
+      ],
+      "relatedDiseases": [],
+      "sources": [
+        {
+          "title": "Pladsholderkilde – ikke en rigtig kilde",
+          "publisher": "Demo"
+        }
+      ],
+      "approval": {
+        "status": "draft",
+        "note": "Demo-indhold til design og test. Ikke medicinsk."
+      },
+      "version": 1
+    }
+  ],
+  "diseases": [
+    {
+      "id": "demo-sygdom-alfa",
+      "title": "Alfa (demosygdom)",
+      "summary": "Pladsholder. Viser, hvordan en sygdomsside ser ud.",
+      "keywords": [
+        "demo"
+      ],
+      "causes": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for årsager. Her kommer den lægegodkendte beskrivelse."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Pladsholder for en årsag.",
+            "Pladsholder for en anden årsag."
+          ]
+        }
+      ],
+      "symptoms": [
+        {
+          "type": "bullets",
+          "items": [
+            "Symptom 1",
+            "Symptom 2",
+            "Symptom 3"
+          ]
+        }
+      ],
+      "treatment": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for den **praktiske vejledning** til behandling."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Pladsholder for første trin.",
+            "Pladsholder for andet trin.",
+            "Pladsholder for tredje trin."
+          ]
+        },
+        {
+          "type": "warning",
+          "text": "Pladsholder for en vigtig advarsel."
+        }
+      ],
+      "relatedFormulas": [
+        "demo-alfa",
+        "demo-beta"
+      ],
+      "sources": [
+        {
+          "title": "Pladsholderkilde – ikke en rigtig kilde",
+          "publisher": "Demo",
+          "edition": "1. udgave",
+          "year": 2026,
+          "pages": "1–2"
+        }
+      ],
+      "approval": {
+        "status": "draft",
+        "note": "Demo-indhold til design og test. Ikke medicinsk."
+      },
+      "version": 1
+    },
+    {
+      "id": "demo-sygdom-delta",
+      "title": "Delta (demosygdom)",
+      "summary": "Pladsholder. En kort sygdomsside med én relateret formel.",
+      "keywords": [
+        "demo"
+      ],
+      "causes": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for årsager."
+        }
+      ],
+      "symptoms": [
+        {
+          "type": "bullets",
+          "items": [
+            "Symptom 2",
+            "Symptom 4"
+          ]
+        }
+      ],
+      "treatment": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for behandling."
+        }
+      ],
+      "relatedFormulas": [
+        "demo-beta"
+      ],
+      "sources": [
+        {
+          "title": "Pladsholderkilde – ikke en rigtig kilde",
+          "publisher": "Demo"
+        }
+      ],
+      "approval": {
+        "status": "draft",
+        "note": "Demo-indhold til design og test. Ikke medicinsk."
+      },
+      "version": 1
+    },
+    {
+      "id": "demo-sygdom-oevelse",
+      "title": "Øvelsessygdom (demo)",
+      "summary": "Pladsholder. Viser dansk alfabetisk sortering.",
+      "keywords": [
+        "demo"
+      ],
+      "causes": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for årsager."
+        }
+      ],
+      "symptoms": [
+        {
+          "type": "bullets",
+          "items": [
+            "Symptom 5"
+          ]
+        }
+      ],
+      "treatment": [
+        {
+          "type": "paragraph",
+          "text": "Pladsholdertekst for behandling."
+        }
+      ],
+      "relatedFormulas": [],
+      "sources": [
+        {
+          "title": "Pladsholderkilde – ikke en rigtig kilde",
+          "publisher": "Demo"
+        }
+      ],
+      "approval": {
+        "status": "draft",
+        "note": "Demo-indhold til design og test. Ikke medicinsk."
+      },
+      "version": 1
+    }
+  ]
+}

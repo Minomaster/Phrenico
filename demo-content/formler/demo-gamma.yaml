@@ -1,0 +1,51 @@
+# DEMO-INDHOLD – IKKE MEDICINSK.
+# Viser en formel med to resultater.
+id: demo-gamma
+title: Gamma (demoformel)
+summary: Pladsholder. Viser en formel med to resultater.
+keywords:
+  - demo
+inputs:
+  - id: fieldD
+    kind: number
+    label: Felt D
+    unit: enhed
+    min: 0
+    max: 1000
+    maxDecimals: 2
+  - id: fieldE
+    kind: number
+    label: Felt E
+    unit: enhed
+    min: 1
+    max: 100
+    maxDecimals: 2
+outputs:
+  - id: quotient
+    label: Kvotient
+    unit: enhed
+    decimals: 2
+  - id: difference
+    label: Differens
+    unit: enhed
+    decimals: 2
+documentation:
+  - type: paragraph
+    text: Pladsholdertekst for dokumentation af en formel med flere resultater.
+example:
+  - type: paragraph
+    text: Pladsholder. Felt D = 10 og Felt E = 4 giver kvotient 2,50 og differens 6,00.
+verifiedExamples:
+  - description: Demo – afrunding halvt op
+    inputs: { fieldD: 10, fieldE: 3 }
+    expected: { quotient: 3.33, difference: 7 }
+  - description: Demo – eksakt resultat
+    inputs: { fieldD: 10, fieldE: 4 }
+    expected: { quotient: 2.5, difference: 6 }
+sources:
+  - title: Pladsholderkilde – ikke en rigtig kilde
+    publisher: Demo
+approval:
+  status: draft
+  note: Demo-indhold til design og test. Ikke medicinsk.
+version: 1

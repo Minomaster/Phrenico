@@ -1,0 +1,24 @@
+# DEMO-INDHOLD – IKKE MEDICINSK.
+# Titlen starter med Ø for at vise dansk sortering (Æ, Ø, Å kommer efter Z).
+id: demo-sygdom-oevelse
+title: Øvelsessygdom (demo)
+summary: Pladsholder. Viser dansk alfabetisk sortering.
+keywords:
+  - demo
+causes:
+  - type: paragraph
+    text: Pladsholdertekst for årsager.
+symptoms:
+  - type: bullets
+    items:
+      - Symptom 5
+treatment:
+  - type: paragraph
+    text: Pladsholdertekst for behandling.
+sources:
+  - title: Pladsholderkilde – ikke en rigtig kilde
+    publisher: Demo
+approval:
+  status: draft
+  note: Demo-indhold til design og test. Ikke medicinsk.
+version: 1

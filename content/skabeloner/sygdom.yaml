@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# SKABELON FOR EN SYGDOMSSIDE
+#
+# Kopiér filen til content/sygdomme/<id>.yaml og udfyld den med det
+# LÆGEGODKENDTE indhold. Filnavnet skal være det samme som `id`.
+# Alt i <vinkelparenteser> skal erstattes. Se docs/INDHOLD.md.
+#
+# Filer i content/skabeloner/ bliver aldrig bygget ind i appen.
+# ─────────────────────────────────────────────────────────────────────────────
+
+id: <sygdommens-id>
+title: <Sygdommens navn>
+summary: <Kort resumé (1-2 linjer)>
+
+# Synonymer, forkortelser osv. Søgningen finder også ord i alle sektioner.
+keywords:
+  - <søgeord>
+
+# Sektionen "Årsager". Tekstblokke: paragraph, bullets, steps, warning.
+causes:
+  - type: paragraph
+    text: <Tekst>
+
+# Sektionen "Symptomer". Skriv symptomer som punkter, så de er lette at
+# skimme og findes ved søgning på ét ord.
+symptoms:
+  - type: bullets
+    items:
+      - <Symptom>
+
+# Sektionen "Behandling" (praktisk vejledning).
+treatment:
+  - type: steps
+    items:
+      - <Trin 1>
+      - <Trin 2>
+  - type: warning
+    text: <Vigtig advarsel>
+
+# Id'er på relaterede formler (valgfrit).
+relatedFormulas: []
+
+sources:
+  - title: <Kildens titel>
+    publisher: <Udgiver>
+    edition: <Udgave>
+    year: <År>
+    pages: <Sidetal>
+
+approval:
+  status: draft
+  # approvedBy:
+  #   name: <Lægens navn>
+  #   title: <fx Overlæge, afdeling>
+  # approvedAt: <ÅÅÅÅ-MM-DD>
+  # reviewBy: <ÅÅÅÅ-MM-DD>
+  # fingerprint: <kør: npm run content:fingerprint -- content/sygdomme/<id>.yaml>
+
+version: 1

@@ -1,0 +1,43 @@
+# DEMO-INDHOLD – IKKE MEDICINSK.
+# Pladsholder, der kun bruges til at vise designet af en sygdomsside.
+id: demo-sygdom-alfa
+title: Alfa (demosygdom)
+summary: Pladsholder. Viser, hvordan en sygdomsside ser ud.
+keywords:
+  - demo
+causes:
+  - type: paragraph
+    text: Pladsholdertekst for årsager. Her kommer den lægegodkendte beskrivelse.
+  - type: bullets
+    items:
+      - Pladsholder for en årsag.
+      - Pladsholder for en anden årsag.
+symptoms:
+  - type: bullets
+    items:
+      - Symptom 1
+      - Symptom 2
+      - Symptom 3
+treatment:
+  - type: paragraph
+    text: Pladsholdertekst for den **praktiske vejledning** til behandling.
+  - type: steps
+    items:
+      - Pladsholder for første trin.
+      - Pladsholder for andet trin.
+      - Pladsholder for tredje trin.
+  - type: warning
+    text: Pladsholder for en vigtig advarsel.
+relatedFormulas:
+  - demo-alfa
+  - demo-beta
+sources:
+  - title: Pladsholderkilde – ikke en rigtig kilde
+    publisher: Demo
+    edition: 1. udgave
+    year: 2026
+    pages: 1–2
+approval:
+  status: draft
+  note: Demo-indhold til design og test. Ikke medicinsk.
+version: 1

@@ -1,0 +1,59 @@
+# DEMO-INDHOLD – IKKE MEDICINSK.
+# Pladsholder, der kun bruges til at vise designet og teste formel-motoren.
+# Vises kun med `npm run demo` og kommer aldrig med i en udgivet app.
+id: demo-alfa
+title: Alfa (demoformel)
+summary: Pladsholder. Lægger to felter sammen, så formel-siden kan vises.
+keywords:
+  - demo
+  - sum
+inputs:
+  - id: fieldA
+    kind: number
+    label: Felt A
+    unit: enhed
+    min: 0
+    max: 100
+    maxDecimals: 1
+    hint: Pladsholder for en hjælpetekst til feltet.
+  - id: fieldB
+    kind: number
+    label: Felt B
+    unit: enhed
+    min: 0
+    max: 100
+    maxDecimals: 1
+outputs:
+  - id: sum
+    label: Sum
+    unit: enhed
+    decimals: 1
+documentation:
+  - type: paragraph
+    text: Pladsholdertekst. Her kommer den lægegodkendte **dokumentation** af formlen.
+  - type: bullets
+    items:
+      - Pladsholder for et punkt.
+      - Pladsholder for et punkt mere.
+example:
+  - type: steps
+    items:
+      - Skriv 12,5 i Felt A.
+      - Skriv 3 i Felt B.
+      - Tryk på Beregn. Resultatet er 15,5 enhed.
+verifiedExamples:
+  - description: Demo – to tal
+    inputs: { fieldA: 12.5, fieldB: 3 }
+    expected: { sum: 15.5 }
+  - description: Demo – grænseværdier
+    inputs: { fieldA: 100, fieldB: 0 }
+    expected: { sum: 100 }
+relatedDiseases:
+  - demo-sygdom-alfa
+sources:
+  - title: Pladsholderkilde – ikke en rigtig kilde
+    publisher: Demo
+approval:
+  status: draft
+  note: Demo-indhold til design og test. Ikke medicinsk.
+version: 1
